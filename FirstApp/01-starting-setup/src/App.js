@@ -1,4 +1,7 @@
+import React from "react";
+import NewExpense from "./Components/NewExpense/NewExpense";
 import Expense from "./Components/Expenses/Expense";
+
 function App() {
   // Here we have an objet wich contains data to fill in the components
 
@@ -24,9 +27,21 @@ function App() {
     },
   ];
 
+  const addExpenseHandler = (enteredExpenseW) => {
+    // expenses = ((prevState) => {
+    //   return {...prevState, }
+    // });
+
+    const mergeExpense = {      
+      enteredExpenseW,
+      ...expenses
+    };
+    console.log(mergeExpense);
+  };
+
   return (
     <div>
-      <h2>Let's get started!</h2>
+      <NewExpense onGetDataExpense={addExpenseHandler}/>
       <Expense item = {expenses} ></Expense>
     </div>
   );

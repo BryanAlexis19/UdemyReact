@@ -11,7 +11,6 @@ function ExpenseItem(props) {
 
  /*  Use the UseState destructuring array to hear the changes*/
   const [title, setTitle] = useState(props.title);
-  console.log("Expense Item evaluated");
  /*  Declare the function to execute */
   function clickHandler(){  
    setTitle("Updated!");
