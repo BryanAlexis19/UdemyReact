@@ -17,6 +17,7 @@ function ExpenseItem(props) {
    console.log("title changed");
  }
   return (
+    <li>
     <Card className="expense-item">
         {/* Point to the declared variable betwen curly brackets*/}
         {/* Insert the subcomponent that we've 
@@ -28,6 +29,7 @@ function ExpenseItem(props) {
         <button onClick={clickHandler}>Chage title!</button>
       </div>
     </Card>
+    </li>
   );
 }
 
