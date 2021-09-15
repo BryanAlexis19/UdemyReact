@@ -1,0 +1,26 @@
+.btnAddUser {
+    background: #1d3461;
+    font: inherit;
+    border: 1px solid #1d3461;
+    color: #fff;
+    margin-top: 15px;
+    padding: 5px;
+    width: 50%;
+    box-shadow: 0 0 4px rgba(0, 0, 0, 0.26);
+    align-self: center;
+}
+
+.btnAddUser:hover,
+.btnAddUser:active {
+  background: #1f487e;
+  border-color: #1f487e;
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.26);
+}
+
+@media (min-width: 768px) {
+    .btnAddUser {
+        width: auto;
+        justify-self: baseline;
+        align-self: baseline
+    }
+}

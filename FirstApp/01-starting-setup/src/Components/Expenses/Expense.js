@@ -20,7 +20,7 @@ function Expense(props) {
     <div>
       <Card className="expenses">
         <ExpensesFilter selectedYearValue={selectedYear} onGetYear={getYear} />
-        <ExpensesChart expenses={filteredExpense} />
+         <ExpensesChart expenses={filteredExpense} /> 
         <ExpensesList items={filteredExpense} />
       </Card>
     </div>

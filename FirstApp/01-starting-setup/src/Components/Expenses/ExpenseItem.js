@@ -26,7 +26,7 @@ function ExpenseItem(props) {
       <div className="expense-item__description">
         <h2>{title}</h2>
         <div className="expense-item__price">${props.amount}</div>
-        <button onClick={clickHandler}>Chage title!</button>
+        <button onClick={clickHandler}>Cambiar Titulo!</button>
       </div>
     </Card>
     </li>
