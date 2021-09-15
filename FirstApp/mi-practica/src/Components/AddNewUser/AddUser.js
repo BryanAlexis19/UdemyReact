@@ -65,6 +65,9 @@ const AddUser = (props) => {
         <input
           id="userage"
           type="number"
+          min="1"
+          step="1"
+          max="120"
           value={enteredAge}
           onChange={AgeInputHandler}
           placeholder={!isValid ? 'Required field' : 'Enter your age'}
