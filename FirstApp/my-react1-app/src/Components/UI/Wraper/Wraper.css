@@ -1,0 +1,43 @@
+.wraper {
+    display: flex;
+    flex-direction: column;
+    font-weight: bold;
+    width: 40rem;
+    max-width: 90%;
+    margin: 2.5rem auto;
+    padding: 1.5rem;
+    border-radius: 10px;
+    box-shadow: 0px 10px 13px -7px #000000, 5px 5px 15px 5px rgba(0, 0, 0, 0);
+}
+
+.bg1{
+    background-color: #001219;
+}
+.bg2{
+    background-color: #005F73;
+}
+.bg3{
+    background-color: #0A9396;
+}
+.bg4{
+    background-color: #94D2BD;
+}
+
+.bg5{
+    background-color: #E9D8A6;
+}
+.bg6{
+    background-color: #EE9B00;
+}
+.bg7{
+    background-color: #CA6702;
+}
+.bg8{
+    background-color: #BB3E03;
+}
+.bg9{
+    background-color: #AE2012;
+}
+.bg10{
+    background-color: #9B2226;
+}

@@ -1,8 +1,9 @@
 import React from 'react'
-import styles from "./Wraper.module.css"
+import "./Wraper.css"
 
 const Wraper = (props) => {
-    let classes = `${styles.wraper} ${props.className}`
+    const classes = `wraper + ${props.className}`
+    console.log(classes);
     return (
         <div className={classes}>
             {props.children}

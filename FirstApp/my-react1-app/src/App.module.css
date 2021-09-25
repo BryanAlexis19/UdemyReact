@@ -1,4 +1,13 @@
+body, html {
+  height: 100%;
+}
 
+.wraper {
+  min-height: (100%)
+}
+
+
+/* 
 .App {
   text-align: center;
 }
@@ -36,4 +45,4 @@
   to {
     transform: rotate(360deg);
   }
-}
+} */

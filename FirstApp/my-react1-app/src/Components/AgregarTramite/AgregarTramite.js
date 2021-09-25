@@ -3,8 +3,9 @@ import Wraper from '../UI/Wraper/Wraper'
 import FormTramite from './FormTramite'
 
 const AgregarTramite = (props) => {
+
     return (
-        <Wraper>
+        <Wraper className={props.className}>
             <FormTramite></FormTramite>
         </Wraper>
     )

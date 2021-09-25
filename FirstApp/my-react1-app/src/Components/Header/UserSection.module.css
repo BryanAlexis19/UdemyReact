@@ -1,0 +1,26 @@
+.user{
+    position: absolute;
+    right: 0;
+    display: flex;
+    /* grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 20px;    
+    gap: 5px; */
+    /* width: 20%; */
+    height: 80px;
+    margin: 10px;    
+    padding: 10px;
+    /* border: 1px solid black;     */
+}
+
+/* .logo h1 {
+    border: 1px solid black; 
+} */
+
+.user h2 {
+    margin: 5px;
+}
+.user img {
+    margin: 5px;
+    width: auto;
+    height: 100%; 
+}

@@ -1,9 +1,33 @@
 
 .footer {
   background-color: #001219;
-  position: absolute;
+  position: relative;
+  left:0;
   bottom: 0;
   width: 100%;
-  height: 150px;
+  height: auto;
   color: white;
+  margin: 0px;
+}
+
+.marginPer {
+  margin: 55px;
+}
+
+.section-wraper {
+  display: inline-flex;
+}
+
+.footer-section {
+  display: flex;
+  flex-direction: column;
+  margin: 15px;
+}
+
+.footer-section ul {
+  list-style: none;
+}
+
+.footer-section li {
+  margin: 15px;
 }
