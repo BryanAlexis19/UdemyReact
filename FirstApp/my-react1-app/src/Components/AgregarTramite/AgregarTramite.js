@@ -4,9 +4,12 @@ import FormTramite from './FormTramite'
 
 const AgregarTramite = (props) => {
 
+    const getTramiteHandler = (TramiteData)=>{
+        props.onReceiveTramite(TramiteData);
+    }
     return (
         <Wraper className={props.className}>
-            <FormTramite></FormTramite>
+            <FormTramite onGetTramite={getTramiteHandler}></FormTramite>
         </Wraper>
     )
 }
