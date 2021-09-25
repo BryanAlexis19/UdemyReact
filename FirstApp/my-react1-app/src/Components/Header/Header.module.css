@@ -1,0 +1,9 @@
+.header {
+    display: inline-flex;
+    justify-content: space-between;
+    flex-direction: column;
+    width: 100%;
+    height: 120px;
+    margin: 0px;
+    background-color: #0A9396;
+}
