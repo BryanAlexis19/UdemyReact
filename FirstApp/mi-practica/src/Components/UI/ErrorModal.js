@@ -4,18 +4,27 @@ import Card from "./Card";
 import styles from "./ErrorModal.module.css";
 
 const ErrorModal = (props) => {
+
+  const special = {
+    padding: '0px',
+    backgroundColor: 'white'
+  };
+
   return (
-    <Card className={`${styles.modal} ${props.ClassName}`}>
-      <header>
-        <h2>{props.title}</h2>
-      </header>
-      <main>
-        <p>{props.message}</p>
-      </main>
-      <footer>
-        <Button>Okay</Button>
-      </footer>
-    </Card>
+    <div>
+      <div className={styles.backdrop} />
+      <Card className={`${styles.modal}`}>
+        <header className={styles.header}>
+          <h2>{props.title}</h2>
+        </header>
+        <div className={styles.content}>
+          <p>{props.message}</p>
+        </div>
+        <footer className={styles.actions}>
+          <Button>Okay</Button>
+        </footer>
+      </Card>
+    </div>
   );
 };
 

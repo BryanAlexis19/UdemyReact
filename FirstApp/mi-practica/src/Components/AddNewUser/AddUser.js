@@ -57,7 +57,7 @@ const AddUser = (props) => {
   //--------------------- Component render-------------------------------
   return (
     <>
-    <ErrorModal title={"hola soy titulo"} message={"Hola soy cuerpo"} onClick={""}></ErrorModal>
+    <ErrorModal title={"Titulo del modal"} message={"Something went wrong"} onClick={""}></ErrorModal>
     <Card>
       <form        
         className={`${styles["form-control"]} ${!isValid && styles.invalid}`}
