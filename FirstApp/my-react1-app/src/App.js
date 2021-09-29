@@ -59,6 +59,7 @@ function App() {
     <div className={styles.wraper}>
       <Header />
       <Nav />
+      <Login></Login>
       <AgregarTramite
         className={`bg2`}
         onReceiveTramite={receiveTramiteHandler}
