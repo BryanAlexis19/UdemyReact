@@ -1,19 +1,22 @@
-import React, { useState } from "react";
+import React, { useState, useRef } from "react";
 import styles from "./AddUser.module.css";
 import Card from "../UI/Card";
 import Button from "../UI/Button";
 import ErrorModal from "../UI/ErrorModal";
+import Wrapper from "../Helpers/Wrapper";
 
 const AddUser = (props) => {
   //--------------------- SComponent States -----------------------------
   const [isValid, setIsValid] = useState(false);
   const [error, setError] = useState();
-  const [enteredName, setEnteredName] = useState("Mac");
-  const [enteredAge, setEnteredAge] = useState("");
+  const nameInputRef = useRef();
+  const ageInputRef = useRef();
 
   //--------------------- Form Submit Handler -----------------------------
   const formSubmitHandler = (e) => {
     e.preventDefault();
+    const enteredName = nameInputRef.current.value
+    const enteredAge = ageInputRef.current.value
 
     if (enteredName.trim().length === 0 || enteredAge.trim().length === 0) {
       setIsValid(false);
@@ -41,12 +44,12 @@ const AddUser = (props) => {
     //Call the function that sends the userData to the app component
     props.onAddUser(userData);
 
-    setEnteredName("");
-    setEnteredAge("");
+    nameInputRef.current.value = '';
+    ageInputRef.current.value = ''; 
     setIsValid(true);
   };
 
-  //--------------------- NameInputHandler -------------------------------
+/*   //--------------------- NameInputHandler -------------------------------
   const nameInputHandler = (e) => {
     if (e.target.value.trim().length === 0) {
       setIsValid(false);
@@ -64,7 +67,7 @@ const AddUser = (props) => {
       setIsValid(true);
     }
     setEnteredAge(e.target.value);
-  };
+  }; */
 
   //------------------------- Button Hnadler ---------------------------
 
@@ -74,7 +77,7 @@ const AddUser = (props) => {
 
   //--------------------- Component render-------------------------------
   return (
-    <>
+    <Wrapper>
       {error && (
         <ErrorModal
           title={error.title}
@@ -91,9 +94,8 @@ const AddUser = (props) => {
           <input
             id="username"
             type="text"
-            value={enteredName}
-            onChange={nameInputHandler}
             placeholder={!isValid ? "Required field!" : "Enter your name"}
+            ref = {nameInputRef}
           ></input>
           <label htmlFor="userage">Age (Years)</label>
           <input
@@ -101,14 +103,13 @@ const AddUser = (props) => {
             type="number"
             step="1"
             max="120"
-            value={enteredAge}
-            onChange={AgeInputHandler}
             placeholder={!isValid ? "Required field" : "Enter your age"}
+            ref = {ageInputRef}
           ></input>
           <Button type="submit">Add User</Button>
         </form>
       </Card>
-    </>
+    </Wrapper>
   );
 };
 
